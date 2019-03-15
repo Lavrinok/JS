@@ -1,0 +1,42 @@
+<html>
+<script>
+function objectWithMethods(x,y) {
+this.x = x;
+this.y=y;
+
+this.sum =  function() {
+alert ("Result of sum :"+(x+y));
+};
+
+this.sub = function() {
+alert ("Result of sub :"+(x-y));
+};
+
+this.mult = function() {
+alert ("Result of mult :"+x*y);
+};
+
+this.div = function() {
+alert ("Result of div :"+x/y);
+};
+
+this.calc = function() {
+z = x+ x*5 - y/2;
+alert ("Result of calculation :"+z);
+};
+
+};
+
+var obj = new objectWithMethods(4,10);
+obj.sum();
+obj.sub();
+obj.mult();
+obj.div();
+obj.calc();
+
+</script>
+
+<body>
+</form>
+</body>
+</html>

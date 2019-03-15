@@ -1,0 +1,32 @@
+<html>
+<script>
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        myFunc = function (arr) {
+            var arrayOfObjects = new Array();
+            arr.forEach(function(entry) {
+            var singleObj = {}
+            singleObj.value = entry;
+            singleObj.method = function(value) {
+                return (entry % 2 === 0) ? true : false;
+                }
+            arrayOfObjects.push(singleObj);
+            })
+ 
+             return arrayOfObjects;
+        }
+        console.log(myFunc(arr));
+
+        //check it
+        var my_arrayOfObjects = myFunc(arr);
+        var my_value = my_arrayOfObjects[3].value;
+        var my_method = my_arrayOfObjects[3].method();
+
+alert(my_value);
+alert(my_method);
+
+</script>
+
+<body>
+</form>
+</body>
+</html>

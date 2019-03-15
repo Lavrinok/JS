@@ -1,0 +1,37 @@
+<html>
+<script>
+var str = 'Anna is a rising star in the world of modelling. Anna is a rising star in the world of modelling';
+var arr = ['anna', 'star', 'is'];
+
+
+myFunc = function (str,arr) {
+  str = str.toLowerCase();
+  var str_words = str.split(" ");
+  var arrayOfObjects = [];
+    
+  for (var i = 0; i < arr.length; i++) {
+    var singleObj = {}
+    var my_word = arr[i];
+    var my_count = 0;
+    for (var j = 0; j < str_words.length; j++) {
+      if (str_words[j] === arr[i]) 
+        my_count+=1;
+      }
+    
+    singleObj.word = my_word;
+    singleObj.count = my_count;
+    arrayOfObjects.push(singleObj);
+  }
+  return  arrayOfObjects;
+}
+var result = myFunc(str,arr);
+for (i = 0; i<result.length; i++)
+{
+alert(result[i].word +" "+ result[i].count);
+}
+</script>
+
+<body>
+</form>
+</body>
+</html>
